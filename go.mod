@@ -5,6 +5,7 @@ go 1.13
 require (
 	github.com/AkihiroSuda/containerd-fuse-overlayfs v1.0.0
 	github.com/BurntSushi/toml v0.3.1
+	github.com/DataDog/datadog-go v4.2.0+incompatible // indirect
 	github.com/Microsoft/go-winio v0.4.15
 	github.com/Microsoft/hcsshim v0.8.10
 	github.com/codahale/hdrhistogram v0.0.0-20160425231609-f8ad88b59a58 // indirect
@@ -48,6 +49,7 @@ require (
 	github.com/opencontainers/runtime-spec v1.0.3-0.20200728170252-4d89ac9fbff6
 	github.com/opentracing-contrib/go-stdlib v1.0.0
 	github.com/opentracing/opentracing-go v1.2.0
+	github.com/philhofer/fwd v1.1.0 // indirect
 	github.com/pkg/errors v0.9.1
 	github.com/pkg/profile v1.5.0
 	github.com/serialx/hashring v0.0.0-20190422032157-8b2912629002
@@ -67,6 +69,7 @@ require (
 	// genproto: the actual version is replaced in replace()
 	google.golang.org/genproto v0.0.0-20200527145253-8367513e4ece
 	google.golang.org/grpc v1.30.0
+	gopkg.in/DataDog/dd-trace-go.v1 v1.27.1
 )
 
 replace (

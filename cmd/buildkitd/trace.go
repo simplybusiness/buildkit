@@ -6,10 +6,22 @@ import (
 
 	opentracing "github.com/opentracing/opentracing-go"
 	jaeger "github.com/uber/jaeger-client-go"
+
+	"gopkg.in/DataDog/dd-trace-go.v1/ddtrace/opentracer"
+	ddtracer "gopkg.in/DataDog/dd-trace-go.v1/ddtrace/tracer"
 )
 
 var tracer opentracing.Tracer
 var closeTracer io.Closer
+
+type DDCloser struct{
+	closerFunction func()
+}
+
+func (d DDCloser) Close() error {
+	d.closerFunction()
+	return nil
+}
 
 func init() {
 
@@ -26,6 +38,16 @@ func init() {
 			jaeger.NewConstSampler(true),
 			jaeger.NewRemoteReporter(tr),
 		)
+	}
+
+	if traceAddr := os.Getenv( "DD_AGENT_TRACE"); traceAddr != "" {
+		tracer = opentracer.New(ddtracer.WithService("buildkitd"))
+
+		// Stop it using the regular Stop call for the tracer package.
+		closeTracer = DDCloser{ddtracer.Stop}
+
+		// Set the global OpenTracing tracer.
+		//opentracing.SetGlobalTracer(t)
 	}
 
 }

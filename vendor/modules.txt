@@ -5,6 +5,8 @@ github.com/Azure/go-ansiterm
 github.com/Azure/go-ansiterm/winterm
 # github.com/BurntSushi/toml v0.3.1
 github.com/BurntSushi/toml
+# github.com/DataDog/datadog-go v4.2.0+incompatible
+github.com/DataDog/datadog-go/statsd
 # github.com/Microsoft/go-winio v0.4.15
 github.com/Microsoft/go-winio
 github.com/Microsoft/go-winio/backuptar
@@ -302,6 +304,8 @@ github.com/opentracing-contrib/go-stdlib/nethttp
 github.com/opentracing/opentracing-go
 github.com/opentracing/opentracing-go/ext
 github.com/opentracing/opentracing-go/log
+# github.com/philhofer/fwd v1.1.0
+github.com/philhofer/fwd
 # github.com/pkg/errors v0.9.1
 github.com/pkg/errors
 # github.com/pkg/profile v1.5.0
@@ -321,6 +325,8 @@ github.com/stretchr/testify/assert
 github.com/stretchr/testify/require
 # github.com/syndtr/gocapability v0.0.0-20180916011248-d98352740cb2
 github.com/syndtr/gocapability/capability
+# github.com/tinylib/msgp v1.1.2
+github.com/tinylib/msgp/msgp
 # github.com/tonistiigi/fsutil v0.0.0-20201103201449-0834f99b7b85
 github.com/tonistiigi/fsutil
 github.com/tonistiigi/fsutil/copy
@@ -396,6 +402,9 @@ golang.org/x/text/unicode/bidi
 golang.org/x/text/unicode/norm
 # golang.org/x/time v0.0.0-20200416051211-89c76fbcd5d1
 golang.org/x/time/rate
+# golang.org/x/xerrors v0.0.0-20191204190536-9bdfabe68543
+golang.org/x/xerrors
+golang.org/x/xerrors/internal
 # google.golang.org/genproto v0.0.0-20200527145253-8367513e4ece => google.golang.org/genproto v0.0.0-20200224152610-e50cd9704f63
 google.golang.org/genproto/googleapis/rpc/status
 # google.golang.org/grpc v1.30.0
@@ -441,6 +450,16 @@ google.golang.org/grpc/serviceconfig
 google.golang.org/grpc/stats
 google.golang.org/grpc/status
 google.golang.org/grpc/tap
+# gopkg.in/DataDog/dd-trace-go.v1 v1.27.1
+gopkg.in/DataDog/dd-trace-go.v1/ddtrace
+gopkg.in/DataDog/dd-trace-go.v1/ddtrace/ext
+gopkg.in/DataDog/dd-trace-go.v1/ddtrace/internal
+gopkg.in/DataDog/dd-trace-go.v1/ddtrace/opentracer
+gopkg.in/DataDog/dd-trace-go.v1/ddtrace/tracer
+gopkg.in/DataDog/dd-trace-go.v1/internal
+gopkg.in/DataDog/dd-trace-go.v1/internal/globalconfig
+gopkg.in/DataDog/dd-trace-go.v1/internal/log
+gopkg.in/DataDog/dd-trace-go.v1/internal/version
 # gopkg.in/yaml.v2 v2.3.0
 gopkg.in/yaml.v2
 # gotest.tools/v3 v3.0.2
